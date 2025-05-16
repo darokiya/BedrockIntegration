@@ -1,5 +1,6 @@
 package com.app.playerservicejava.model;
 
+
 import jakarta.persistence.*;
 
 @Entity

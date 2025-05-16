@@ -28,13 +28,13 @@ public class ChatClientService {
         return models;
     }
 
-    public String chat() throws OllamaBaseException, IOException, InterruptedException {
+    public String chat(String prompt) throws OllamaBaseException, IOException, InterruptedException {
         String model = OllamaModelType.TINYLLAMA;
 
         // https://ollama4j.github.io/ollama4j/intro
         PromptBuilder promptBuilder =
                 new PromptBuilder()
-                        .addLine("Recite a haiku about recursion.");
+                        .addLine(prompt);
 
         boolean raw = false;
         OllamaResult response = ollamaAPI.generate(model, promptBuilder.build(), raw, new OptionsBuilder().build());
