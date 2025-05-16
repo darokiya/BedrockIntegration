@@ -89,3 +89,8 @@ Having trouble with docker? Try using podman as an alternative. Instructions [he
 
 2. Open your browser and visit `http://localhost:8080/v1/chat/list-models`
    - If the application is running successfully, you will see a json response that include information about tinyllama
+
+
+Note:
+
+To get the Bedrock integration working add application.properties in the resources folder with AWS credentials
